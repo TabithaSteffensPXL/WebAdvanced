@@ -1,0 +1,117 @@
+Vue basics
+
+Options API is preferred because Options API is much easier to read in the beginning
+
+Next year we're going from Options API to Composition API (Composition is newer but also more complicated)
+
+Typescript is preferred for Vue but not required
+
+Vue prevents a lot of copied code through the use of components
+
+UI usually only needs to be written once then called in other components
+
+<template> <style> <script> is HTML, CSS, and Javascript respectfully, leave these be
+
+You can use the <template> for specific components, but <style> is normally placed in a central main.css file
+
+New Vue Project:
+-Open the right directory in the terminal (right click, open in terminal)
+
+- write npm create vue@latest
+
+-Answer the questions
+
+-Router and Pinia are going to be features that are included in the project
+
+-Go to the directory for your Vue Project (cd VueProjectName)
+
+-Run npm install OR npm i
+
+-run npm run dev
+
+Don't mess with the .gitignore, node_modules absolutely cannot go to Github or away from where it is.
+If you mess with it it can deleted accidentally.
+
+If node_modules or package.json give any problems of if you have problems in your project, delete those two files
+and run npm install again.
+
+npm will automatically choose the next available port (localhost), for example if you have 5173 open already
+it will automatically open 5174
+
+The most important files in a vue projects are index.html and main.js.
+
+in the index.html you replace the contents of the div with the ID "app" as many times as needed, so you never leave
+index.html if you open another "page"
+
+in main.js you make and import your App.vue, so it can replace the div when it needs to, without this file you
+dont have a Vue project. The main.js also makes sure you have routers available to change pages and a pinia
+store so that you can save and send information throughout the routings (for example, login information).
+
+You can right click on the views folder and add a new view to your Vue project, but always keep Options API clicked
+
+Do not delete any code that it starts with
+
+You can see if a vue project is options or composition api through checking the <script>. If it has setup
+next to it, it's composition.
+
+
+<script>
+export default {
+  name: "HomeView",
+  components: {
+    ProductCard
+  }
+}
+import ProductCard from "@/components/ProductCard.vue";
+</script>
+
+this is a standard setup of a Options API component, or View. when you add a component to a view, you need to import
+it, or else it won't know where the file comes from and won't load it
+
+To call data from the initial component in your html or <template> you can use {{(data-name)}}
+
+With props after your data you can specify what data types your data has, for example in the product card from
+the tutorial you can specify that your category is an array or your name is a string, but every type is typed with
+a capital letter. Every product will have these "props", or properties. So if you make a new product it will have
+these automatically
+
+if you have the props you van specify what the props are when you call the component in the
+HomeView, for example the name, price, image etc. This way you can call it multiple time for multiple
+products, you could also call it in a v-for list in order to show every product from either a json server or from
+an sql server
+
+v-for="member in teamMembers" :key="member.id" :member="member"
+
+(MyComponent.vue shows how to use props in order to show information. It also uses the computed function
+that does something as soon as the component is loaded)
+
+You can also only show something if a requirement is met, for example if you have an image, show the image if not
+show a default image,  like give you a specific background color if it has a class, MyComponent also has an
+example of that
+
+You can also call methods in your script, so that they can be called in your template. this is a v-on directive
+but for things like buttons and such you can also use @click (v-on is longhand, @ is shorthand)
+
+v-bind is one way data binding, v-model is two way data binding(v-model has an example in myComponent)
+
+v-if and v-else shows something if a requirement is met, and shows something else if the requirement is not met
+          <img v-if="showImage" :src="product.photo" class="card-img-top" :alt="product.description">
+          <img v-else src="/src/assets/stock-profile-photo.jpg" class="card-img-top" alt="{{product.description}}">
+(true is truthy and false is falsy in vue)
+
+
+<br>
+<hr>
+<br>
+makes a line between elements
+
+You can also use this.$emit in order to show the value of a child element
+child element does things, parent element can see it and move further with the thing that was done by the child
+
+you need to set HandleEvent(event) in your methods of your parent component in order to catch the emit
+
+
+(dynamic images)to use src from a file, use both double and single quotes, you can also add a prop of filenames to be able to loop
+through and gather a bunch of photo filenames
+
+pexels.com for stock images

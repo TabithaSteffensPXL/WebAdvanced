@@ -1,0 +1,21 @@
+API Calls: Promises and Fetches with JSON files/servers
+
+AKA: Why there's a bicycle on the highway
+
+without the API Online you can't make any calls (why websites always have a server running)
+
+first you need to download json-server
+
+
+when you do api calls there are 3 statuses to promises: fulfilled, rejected, pending
+
+so long as it's pending, you're not getting any information
+
+rejected promises almost always have a html error code (usually 500 unauthenticated)
+
+fulfilled promises give usually a html code 200 (ok)
+
+json servers are stored normally on the localhost, but each port can only be opened 1 time, so if one
+is on localhost:3000, the next one should be on 3001.
+
+in the server directory, write json-server --watch (json file here) to start up a json server

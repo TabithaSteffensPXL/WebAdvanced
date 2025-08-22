@@ -1,0 +1,11 @@
+Primitive types:
+
+keep their original values unless changed
+
+ex: let a = 10
+let b = a
+a = 12
+console.log(b)
+
+b is still 10 because it made a copy of a before a changed
+

@@ -1,0 +1,19 @@
+
+-don't do default event from HTML elements
+-don't add events in the HTML file, always in JS, this mixes the two files and makes things confusing
+-there are several different types of events
+-don't do keypress and keydown at the same time it will prob crash
+
+-Every event has a target (usually what has the .eventlistener(type, function) added to it)
+-you could do .onclick in js but it is not recommended
+-with addEventListener(), you can add more than 1 event to 1 target, with other methods this isn't possible
+
+
+mouseover/mouseout are mouseenter/mouseleave
+k_event.Key is e.Key (it still needs to be a parameter in the function)
+.preventDefault() prevents the default action of the key, for example it prevents a new line from
+being created via the enter button
+
+
+
+

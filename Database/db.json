@@ -1,0 +1,40 @@
+{
+  "students": [
+    {
+      "id": "12402665",
+      "name": "Indy",
+      "age": 27,
+      "email": "indy.iri@student.pxl.be"
+    },
+    {
+      "id": "12402666",
+      "name": "Tabitha",
+      "age": 25,
+      "email": "tabitha.steffens@student.pxl.be"
+    },
+    {
+      "id": "12304364",
+      "name": "Mehmet",
+      "age": 33,
+      "email": "mehmet.cekic@student.pxl.be"
+    },
+    {
+      "id": "12304365",
+      "name": "Benno",
+      "age": 20,
+      "email": "benno.laukens@student.pxl.be"
+    }
+  ],
+  "classrooms": [
+    {
+      "id": "EB302",
+      "name": "Computer room"
+    }
+  ],
+  "courses": [
+    {
+      "id": "20985",
+      "name": "math"
+    }
+  ]
+}

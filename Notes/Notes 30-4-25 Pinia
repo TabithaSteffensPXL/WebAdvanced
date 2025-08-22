@@ -1,0 +1,76 @@
+Pinia is a state management library
+or in other words a way to store and send information to and from components in vue
+
+Pinia has and is a store, that you can use for one or more pieces of information
+
+every piece of info in the store is a "Source of truth"
+
+Components can look at the info in the Pinia store and change it or verify it
+
+It works with typescript under normal circumstances
+
+You can do things at the same time with the Pinia Store
+
+a pinia store is usually stored in the "Stores" folder in a vue project
+
+The state is the information in the store, you can implement them right then or you can add references
+to other places in order to locate the store
+
+in the components under the computed section of the export you can look, retrieve, or change
+items in the pinia store
+
+in the pinia store you can return items
+
+actions are methods that you can use within the store that can be called in other components.
+(Think your api calls in WPL project)
+
+actions are usually if not always async
+
+mutations have influence on actions
+
+modules have a weird structure in a project
+
+to make a store:
+ -you just make a new javascript file in your stores folder
+
+ -import from define store in order to declare it a store
+
+ -export const: this is how you use your store elsewhere, you give a name and an ID to your store,
+ and options for your store when you export it
+
+ -from here you can declare a state, which can have items or not, but in most cases there is a
+ "default", you can store arrays or objects or anything really, so you can have a state item that's an array
+ then directly after that a string like a title or something
+
+export const useCardStore = defineStore('cardStore', {
+    state: () => ({
+        cards: [],
+        card1: {
+            name: '',
+            manaCost: 0,
+            imgSource: '',
+            description: '',
+        },
+        card2: {
+            name: '',
+            manaCost: 0,
+            imgSource: '',
+            description: '',
+        },
+        loading: true,
+    }),
+    actions: {}
+}
+
+-you can use getters to return your state items, or the length of any arrays and such
+GETTERS ARE SYNCHRONOUS
+
+-then you can use Actions to change your state items. (API calls remember)
+ACTIONS MAY BE ASYNCHRONOUS, API CALLS GO HERE
+
+
+Now you can use your store in other components by declaring it as a variable and then either calling
+the actions or calling the getters or state. you can declare it in your data of your component
+
+You can call the actions within the methods of the components.
+

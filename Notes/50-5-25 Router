@@ -1,0 +1,21 @@
+You can add children to router links (vue/router/index.js)
+the children do not get a slash in the path because they automatically get a slash when clicked
+<router-link to="/{path}" > is the equivalent to an a element in HTML in Vue
+you can also do a router link to a child path in a nav bar for example (with <router-link to="/{path}/{childpath}">)
+
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView,
+      children: ({
+            path: '',
+            name: "overview",
+            component: defaultOverviewView,
+      })
+    },
+
+    Then you can add additional router links and router paths and such like normal
+
+
+    the highest routes need a slash in order to define, but any children do not require slashes
+

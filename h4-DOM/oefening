@@ -1,0 +1,38 @@
+Omschrijving:Je gaat een eenvoudig "Carwash Wachtrij" systeem bouwen waarin je een lijst van auto's kunt beheren.Dit systeem bepaalt de volgorde van te
+wassen auto's op basis van hoe vuil ze zijn.Doelstellingen:Gebruik maken van arrays om een lijst van auto's op te slaan.Gebruik objecten om de gegevens
+van een auto te structureren.Pas controlestructuren toe om bepaalde acties uit te voeren (bijvoorbeeld sorteren op vuilheidsniveau).Maak gebruik van
+functies om herbruikbare code te schrijven.Stap 1: Auto Objecten en LijstMaak een lege array cars om de auto's in op te slaan.Maak een functie
+ addCar(licensePlate, owner, dirtLevel) die een nieuw auto-object aan de array toevoegt.    Of volgens een object: addCar(car) waarbij car een object
+  is met de eigenschappen    licensePlate, owner en dirtLevel.Maak ook een functie isValidCar(car) die controleert of een auto-object correct is.
+
+  Deze kan je voorzien van een aantal basiscontroles, zoals of de nummerplaat correct is en of het    vuilheidsniveau binnen een bepaalde schaal ligt.
+
+  Maar eveneens of het type van de variabelen correct is.Een auto-object moet de volgende eigenschappen hebben:
+   licensePlate (string, bijvoorbeeld "1-ABC-123")    owner (string, bijvoorbeeld "Jan")   dirtLevel (number, schaal van 1-10)
+   Voorbeeld:addCar("1-ABC-123", "Jan", 7);addCar("2-XYZ-789", "Lisa", 3);
+   Of volgens een object:addCar({ licensePlate: "1-ABC-123", owner: "Jan", dirtLevel: 7 });
+
+   Stap 2: Lijst WeergevenMaak een functie showCars() die alle auto's in de console logt.Gebruik een loop om door de cars array te gaan en elke auto weer
+   te geven in de vorm:Auto met nummerplaat 1-ABC-123 van Jan heeft een vuilheidsniveau van 7.Voorbeeldoutput:showCars();//
+    Output:// Auto met nummerplaat 1-ABC-123 van Jan heeft een vuilheidsniveau van 7.// Auto met nummerplaat 2-XYZ-789 van Lisa heeft een vuilheidsniveau
+    van 3.
+
+    Stap 3: Sorteer op VuilheidsniveauMaak een functie sortByDirtLevel() die de auto's sorteert op basis van vuilheidsniveau, van hoog naar laag.
+    Gebruik de sort-methode om de lijst opnieuw te ordenen.Gebruik een loop om de gesorteerde lijst weer te geven.sortByDirtLevel();//
+    Output:// Auto met nummerplaat 1-ABC-123 van Jan heeft een vuilheidsniveau van 7.// Auto met nummerplaat 2-XYZ-789 van Lisa heeft een
+    vuilheidsniveau van 3.
+
+    Stap 4: Extra Uitbreiding (Optioneel)Wil je de opdracht wat uitdagender maken? Voeg deze functies toe:Zoek een auto op
+    nummerplaat: findCar(licensePlate) die een auto zoekt en zijn details toont.Wachtrij op basis van vuilheidsniveau: Een functie getWashQueue()
+    die de auto's toont in de volgorde waarin ze gewassen moeten worden.Extra Functies en Uitdagingen
+
+    Stap 5: Wassen van een AutoMaak een functie washCar()
+     die de vuilste auto uit de wachtrij haalt en deze wast.De vuilste auto heeft het hoogste dirtLevel.Bijvoorbeeld: Na het aanroepen van washCar(),
+     wordt de auto met het hoogste vuilheidsniveau gewassen en behouden in de wachtrij met dirtLevel 1.
+
+     Stap 6: Reset na WassenMaak een functie
+     resetCarsAfterWash() die alle auto's in de wachtrij terugzet naar vuilheidsniveau 1 nadat ze gewassen zijn.Verwachte EindresultaatJe code moet correct
+      werken en de volgende acties ondersteunen:
+      ✅ Auto's toevoegen✅ Lijst van auto's tonen✅ Auto's sorteren op basis van vuilheidsniveau✅
+
+      (Optioneel) Extra functies zoals zoeken of een wachtrij tonenVeel succes! 🚗💦
